@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply OD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /> -->
+
+    <link rel="stylesheet" href="form.css" />
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+        background-color: rgba(0, 0, 0, 0.822);
+      }
+
+      ::-webkit-scrollbar:horizontal {
+        height: 0;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 12px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(85, 85, 85);
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">
+          Sri Venkateswara College of Engineering (SVCE)
+        </h1>
+        <p id="description" class="description text-center">
+          SRIPERUMBUDUR - 602 117
+          <br />
+          DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+          <br /><br />
+          STUDENT ON-DUTY FORM
+        </p>
+      </header>
+      <form class="od-form" onsubmit="return false">
+        <div class="form-group">
+          <label for="name">Name</label>
+
+          <input
+            id="name"
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Registration Number</label>
+          <input
+            id="reg-no"
+            type="text"
+            class="form-control"
+            placeholder="Registration No. (9-digit)"
+            required
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number"
+            maxlength="9"
+          />
+        </div>
+
+        <div class="form-group">
+          <p class="l">Year</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value></option>
+            <option value="1st year">1st year</option>
+            <option value="2nd year">2nd year</option>
+            <option value="3rd year">3rd year</option>
+            <option value="4th year">4th year</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="event">Name of the Event</label>
+
+          <input
+            id="name"
+            type="text"
+            class="form-control"
+            placeholder="Event Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="dates">From</label>
+          <input type="date" id="start" />
+        </div>
+
+        <div class="form-group">
+          <label for="dates">To</label>
+          <input type="date" id="end" />
+        </div>
+
+        <div class="form-group">
+          <p class="l">Dayscholar/Hosteller</p>
+          <br />
+          <label>
+            <input
+              name="d-h"
+              value="Dayscholar"
+              type="radio"
+              class="input-radio"
+              checked
+            />Dayscholar</label
+          >
+          <label>
+            <input
+              name="d-h"
+              value="Hosteller"
+              type="radio"
+              class="input-radio"
+            />Hosteller</label
+          >
+        </div>
+
+        <div class="form-group">
+          <button
+            type="submit"
+            id="submit"
+            class="submit-button"
+            onClick="window.location.reload();"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script> -->
+  </body>
+</html>
